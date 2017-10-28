@@ -23,6 +23,6 @@ deploy:
     github_token: ${GITHUB_TOKEN}
     local_dir: public
     skip_cleanup: true
-    repo: git@github.com:albee824/albee824.github.io
+    repo: albee824/albee824.github.io
     on:
       branch: master
