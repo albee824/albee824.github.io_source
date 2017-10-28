@@ -1,0 +1,72 @@
+ {{ define "main" }}
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <span class="name">{{ .Title }}</span>
+    </div>
+  </div>
+</header>
+<section>
+  <div class="container">
+    {{ range (.Paginator 10).Pages }}
+    <div class="row margin-10">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div>
+          <h2>
+            <a href='{{ .Permalink }}'>{{ .Title }}</a>
+          </h2>
+          <div class="margin-10">
+            <small>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='{{ .Date.Format "2006-01-02" }}'> {{ .Date.Format "January 2, 2006" }}</time>
+            </small>
+            <i class="fa fa-tags" aria-hidden="true"></i>
+          </div>
+        </div>
+        <p>{{ .Summary }}</p>
+        <p class="lead">
+          <a href='{{ .Permalink }}' class="btn btn-primary text-center">Read more &rarr;</a>
+        </p>
+      </div>
+    </div>
+    <hr> {{ end }}
+    <!-- Page Navi -->
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          {{ if .Paginator.HasPrev }}
+          <li class="page-item">
+            <a class="page-link" href='{{ .Paginator.Prev.URL }}' tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">{{ sub .Paginator.PageNumber 1 }}</a>
+          </li>
+          {{ else }}
+          <li class="page-item disabled">
+            <a class="page-link" href='#' tabindex="-1">Previous</a>
+          </li>
+          {{ end }}
+          <li class="page-item disabled">
+            <a class="page-link" href='#'>{{ .Paginator.PageNumber }}</a>
+          </li>
+          {{ if .Paginator.HasNext }}
+          <li class="page-item">
+            <a class="page-link" href='{{ .Paginator.Next.URL }}'>{{ add .Paginator.PageNumber 1 }}</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href='{{ .Paginator.Next.URL }}' tabindex="-1">Next</a>
+          </li>
+          {{ else }}
+          <li class="page-item disabled">
+            <a class="page-link" href='#' tabindex="-1">Next</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

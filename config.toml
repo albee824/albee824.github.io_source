@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://albee824.github.io/"
 languageCode = "jp"
 title = "My New Hugo Site"
 hasCJKLanguage = true

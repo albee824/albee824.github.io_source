@@ -25,6 +25,11 @@ header.masthead {
 header.masthead img {
   display: block;
   margin: 0 auto 20px;
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 150px;
+  -moz-border-image: border-radius: 150px;
+  -webkit-border-image: border-radius: 150px;
 }
 header.masthead .intro-text .name {
   font-size: 2em;
