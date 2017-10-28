@@ -24,5 +24,6 @@ deploy:
     local_dir: public
     skip_cleanup: true
     repo: albee824/albee824.github.io
+    target_branch: master
     on:
       branch: master
