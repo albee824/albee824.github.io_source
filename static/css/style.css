@@ -1,0 +1,65 @@
+body {
+  font-family: "Noto Sans Japanese", Helvetica, Arial, sans-serif;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: white;
+}
+hr.star-light {
+  max-width: 250px;
+  margin: 25px auto 30px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-top: solid 5px;
+}
+header.masthead {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: white;
+  background: #3498db;
+}
+header.masthead img {
+  display: block;
+  margin: 0 auto 20px;
+}
+header.masthead .intro-text .name {
+  font-size: 2em;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+}
+header.masthead .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.success {
+  color: white;
+  background: #3498db;
+}
+
+.btn-primary {
+  font-weight: 700;
+  color: white;
+  border-color: #3498db;
+  background-color: #3498db; }
+  .btn-primary.focus, .btn-primary.active, .btn-primary:focus, .btn-primary:hover, .btn-primary:active {
+    color: white;
+    border-color: #2980b9;
+    background-color: #2980b9;
+  }
+
+.card-block {
+  min-height: 220px;
+  padding: 10px;
+}
+
+

@@ -1,0 +1,60 @@
+{{ define "main" }}
+<header class="masthead">
+  <div class="container">
+    <img class="img-fluid" src="img/profile.png" alt="">
+    <div class="intro-text">
+      <span class="name">Yuya Takahashi</span>
+      <hr class="star-light">
+      <span class="skills">Network Engineer</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2 class="text-center">Recent Articles</h2>
+    <hr class="star-light">
+    <div class="row">
+      {{ range first 3 .Data.Pages }}
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-block">
+            <h3 class="card-title">{{ .Title }}</h3>
+            <p class="card-text">{{ .Summary }}</p>
+            <p class="card-text text-right"><small class="text-muted">{{.Date.Format "Monday, Jan 2, 2006" }}</small></p>
+            <a href='{{ .Permalink }}' class="btn btn-primary text-center">Read More</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!--
+<section class="success" id="about">
+  <div class="container">
+    <h2 class="text-center">About</h2>
+    <hr class="star-light">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="text-center">Summary</h3>
+        <p>
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="text-center">Career</h3>
+        <p>
+          fugafuga
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="text-center">Skills</h3>
+        <p>
+          fugafuga
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+{{ end }}
