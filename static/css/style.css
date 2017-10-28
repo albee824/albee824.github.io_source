@@ -46,6 +46,22 @@ section.success {
   background: #3498db;
 }
 
+.btn-social {
+  font-size: 20px;
+  line-height: 45px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 100%;
+  color: white; }
+  .btn-social.focus, .btn-social.active, .btn-social:focus, .btn-social:hover, .btn-social:active {
+    color: white;
+    border-color: #2980b9;
+    background-color: #2980b9;
+  }
+
 .btn-primary {
   font-weight: 700;
   color: white;
